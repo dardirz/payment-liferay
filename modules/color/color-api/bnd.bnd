@@ -1,0 +1,9 @@
+Bundle-Name: color-api
+Bundle-SymbolicName: com.payment.color.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	
+	com.payment.color.service,
+	
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../color-service/service.xml

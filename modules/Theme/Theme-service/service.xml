@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.3.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_3_0.dtd">
+
+<service-builder dependency-injector="ds"
+	package-path="com.payment.theme">
+	<namespace>THEMES</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" 
+		remote-service="false" session-factory="sampleSessionFactory" table="foo" 
+		tx-manager="sampleTransactionManager uuid="true""> -->
+	<entity local-service="true" name="Themes" remote-service="true" uuid="true">
+		<column name="colorsId" type="long" primary="true" />
+		<column name="userId" type="long" />
+		<column name="neutralBlack" type="String" />
+		<column name="neutralWhite" type="String" />
+		<column name="neutralGray1" type="String" />
+		<column name="primaryBg" type="String" />
+		<column name="primaryLight" type="String" />
+		<column name="primaryDark" type="String" />
+		<column name="primaryDefault" type="String" />
+		<column name="primaryDisabled" type="String" />
+		<column name="secondaryBg" type="String" />
+		<column name="secondaryLight" type="String" />
+		<column name="secondaryDark" type="String" />
+		<column name="secondaryDefault" type="String" />
+		<column name="secondaryDisabled" type="String" />
+		<column name="successBg" type="String" />
+		<column name="successLight" type="String" />
+		<column name="successDark" type="String" />
+		<column name="successDefault" type="String" />
+		<column name="successDisabled" type="String" />
+		<column name="errorBg" type="String" />
+		<column name="errorLight" type="String" />
+		<column name="errorDark" type="String" />
+		<column name="errorDefault" type="String" />
+		<column name="errorDisabled" type="String" />
+		<column name="warningBg" type="String" />
+		<column name="warningLight" type="String" />
+		<column name="warningDark" type="String" />
+		<column name="warningDefault" type="String" />
+		<column name="warningDisabled" type="String" />
+		
+		<finder name="UserId" return-type="Collection">
+			<finder-column name="userId" />
+		</finder>
+	</entity>
+</service-builder>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.payment.theme.model.Themes">
+		<field name="uuid" type="String" />
+		<field name="colorsId" type="long" />
+		<field name="userId" type="long" />
+		<field name="neutralBlack" type="String" />
+		<field name="neutralWhite" type="String" />
+		<field name="neutralGray1" type="String" />
+		<field name="primaryBg" type="String" />
+		<field name="primaryLight" type="String" />
+		<field name="primaryDark" type="String" />
+		<field name="primaryDefault" type="String" />
+		<field name="primaryDisabled" type="String" />
+		<field name="secondaryBg" type="String" />
+		<field name="secondaryLight" type="String" />
+		<field name="secondaryDark" type="String" />
+		<field name="secondaryDefault" type="String" />
+		<field name="secondaryDisabled" type="String" />
+		<field name="successBg" type="String" />
+		<field name="successLight" type="String" />
+		<field name="successDark" type="String" />
+		<field name="successDefault" type="String" />
+		<field name="successDisabled" type="String" />
+		<field name="errorBg" type="String" />
+		<field name="errorLight" type="String" />
+		<field name="errorDark" type="String" />
+		<field name="errorDefault" type="String" />
+		<field name="errorDisabled" type="String" />
+		<field name="warningBg" type="String" />
+		<field name="warningLight" type="String" />
+		<field name="warningDark" type="String" />
+		<field name="warningDefault" type="String" />
+		<field name="warningDisabled" type="String" />
+	</model>
+</model-hints>

@@ -1,0 +1,4 @@
+Bundle-Name: colorPortlet
+Bundle-SymbolicName: com.payment.color
+Bundle-Version: 1.0.0
+Export-Package: com.payment.color.constants
