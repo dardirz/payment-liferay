@@ -31,6 +31,21 @@ public class ColorServiceWrapper
 	}
 
 	@Override
+	public com.payment.color.colorobjects.MainColor adaptColors() {
+		return _colorService.adaptColors();
+	}
+
+	/**
+	 * Returns the OSGi service identifier.
+	 *
+	 * @return the OSGi service identifier
+	 */
+	@Override
+	public String getOSGiServiceIdentifier() {
+		return _colorService.getOSGiServiceIdentifier();
+	}
+
+	@Override
 	public ColorService getWrappedService() {
 		return _colorService;
 	}

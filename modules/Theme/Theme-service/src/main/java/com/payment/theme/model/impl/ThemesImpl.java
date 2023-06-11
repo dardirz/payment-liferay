@@ -23,7 +23,7 @@ package com.payment.theme.model.impl;
  *
  * @author Brian Wing Shun Chan
  */
-public  class ThemesImpl extends ThemesBaseImpl {
+public class ThemesImpl extends ThemesBaseImpl {
 
 	/*
 	 * NOTE FOR DEVELOPERS:
@@ -31,12 +31,6 @@ public  class ThemesImpl extends ThemesBaseImpl {
 	 * Never reference this class directly. All methods that expect a themes model instance should use the {@link com.payment.theme.model.Themes} interface instead.
 	 */
 	public ThemesImpl() {
-	}
-
-	@Override
-	public void persist() {
-		// TODO Auto-generated method stub
-		
 	}
 
 }

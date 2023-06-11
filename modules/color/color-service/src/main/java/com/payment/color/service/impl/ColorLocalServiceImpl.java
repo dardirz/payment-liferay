@@ -57,8 +57,8 @@ public class ColorLocalServiceImpl extends ColorLocalServiceBaseImpl {
 	 *
 	 * Never reference this class directly. Use <code>com.payment.color.service.ColorLocalService</code> via injection or a <code>org.osgi.util.tracker.ServiceTracker</code> or use <code>com.payment.color.service.ColorLocalServiceUtil</code>.
 	 */
-	public List<MainColor> adaptColors() {
-		List<MainColor> colors = new ArrayList();
+	public MainColor adaptColors() {
+		MainColor colors =new MainColor();
 		Themes theme = _themesPersistenceImpl.findAll().get(0);
 		
 		ErrorColor error = new ErrorColor();
@@ -109,7 +109,7 @@ public class ColorLocalServiceImpl extends ColorLocalServiceBaseImpl {
 		main.setSuccess(success);
 		main.setWarning(warning);
 		
-		colors.add(main);
+		
 		return colors;
 		
 	}

@@ -48,4 +48,11 @@ public interface ThemesService extends BaseService {
 	 * Never modify this interface directly. Add custom service methods to <code>com.payment.theme.service.impl.ThemesServiceImpl</code> and rerun ServiceBuilder to automatically copy the method declarations to this interface. Consume the themes remote service via injection or a <code>org.osgi.util.tracker.ServiceTracker</code>. Use {@link ThemesServiceUtil} if injection and service tracking are not available.
 	 */
 
+	/**
+	 * Returns the OSGi service identifier.
+	 *
+	 * @return the OSGi service identifier
+	 */
+	public String getOSGiServiceIdentifier();
+
 }

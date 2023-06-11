@@ -4,3 +4,7 @@ Bundle-Version: 1.0.0
 Liferay-Require-SchemaVersion: 1.0.0
 Liferay-Service: true
 -dsannotations-options: inherit
+Export-Package: \
+	com.payment.color.service,\
+	com.payment.color.service.impl,\
+	com.payment.color.colorobjects

@@ -37,6 +37,19 @@ public class ColorLocalServiceUtil {
 	 *
 	 * Never modify this class directly. Add custom service methods to <code>com.payment.color.service.impl.ColorLocalServiceImpl</code> and rerun ServiceBuilder to regenerate this class.
 	 */
+	public static com.payment.color.colorobjects.MainColor adaptColors() {
+		return getService().adaptColors();
+	}
+
+	/**
+	 * Returns the OSGi service identifier.
+	 *
+	 * @return the OSGi service identifier
+	 */
+	public static String getOSGiServiceIdentifier() {
+		return getService().getOSGiServiceIdentifier();
+	}
+
 	public static ColorLocalService getService() {
 		return _serviceTracker.getService();
 	}

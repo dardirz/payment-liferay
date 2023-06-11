@@ -15,10 +15,14 @@
 package com.payment.color.service.impl;
 
 import com.liferay.portal.aop.AopService;
-
+import com.payment.color.colorobjects.MainColor;
+import com.payment.color.service.ColorLocalService;
+import com.payment.color.service.ColorLocalServiceUtil;
 import com.payment.color.service.base.ColorServiceBaseImpl;
+import com.payment.color.service.persistence.impl.constants.ColorPersistenceConstants;
 
 import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
 
 /**
  * The implementation of the color remote service.
@@ -47,4 +51,14 @@ public class ColorServiceImpl extends ColorServiceBaseImpl {
 	 *
 	 * Never reference this class directly. Always use <code>com.payment.color.service.ColorServiceUtil</code> to access the color remote service.
 	 */
+	
+	public MainColor adaptColors() {
+		
+		return ColorLocalServiceUtil.adaptColors();
+	}
+	
+	
+		
+
+	
 }

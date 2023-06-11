@@ -30,6 +30,16 @@ public class ThemesServiceWrapper
 		_themesService = themesService;
 	}
 
+	/**
+	 * Returns the OSGi service identifier.
+	 *
+	 * @return the OSGi service identifier
+	 */
+	@Override
+	public String getOSGiServiceIdentifier() {
+		return _themesService.getOSGiServiceIdentifier();
+	}
+
 	@Override
 	public ThemesService getWrappedService() {
 		return _themesService;
