@@ -4,7 +4,7 @@ Bundle-Version: 1.0.0
 Export-Package: \
 	com.payment.color.colorobjects,\
 	com.payment.color.service
-	com.payment.color.service,
+	
 	
 -check: EXPORTS
 -includeresource: META-INF/service.xml=../color-service/service.xml
