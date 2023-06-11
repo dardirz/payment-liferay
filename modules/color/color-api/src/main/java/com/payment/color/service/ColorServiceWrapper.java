@@ -30,16 +30,6 @@ public class ColorServiceWrapper
 		_colorService = colorService;
 	}
 
-	/**
-	 * Returns the OSGi service identifier.
-	 *
-	 * @return the OSGi service identifier
-	 */
-	@Override
-	public String getOSGiServiceIdentifier() {
-		return _colorService.getOSGiServiceIdentifier();
-	}
-
 	@Override
 	public ColorService getWrappedService() {
 		return _colorService;

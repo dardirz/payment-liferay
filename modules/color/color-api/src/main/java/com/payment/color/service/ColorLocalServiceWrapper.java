@@ -31,23 +31,6 @@ public class ColorLocalServiceWrapper
 	}
 
 	@Override
-	public java.util.List<com.payment.color.colorobjects.MainColor>
-		adaptColors() {
-
-		return _colorLocalService.adaptColors();
-	}
-
-	/**
-	 * Returns the OSGi service identifier.
-	 *
-	 * @return the OSGi service identifier
-	 */
-	@Override
-	public String getOSGiServiceIdentifier() {
-		return _colorLocalService.getOSGiServiceIdentifier();
-	}
-
-	@Override
 	public ColorLocalService getWrappedService() {
 		return _colorLocalService;
 	}

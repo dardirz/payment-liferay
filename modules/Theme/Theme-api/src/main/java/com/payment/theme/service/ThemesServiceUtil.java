@@ -37,16 +37,6 @@ public class ThemesServiceUtil {
 	 *
 	 * Never modify this class directly. Add custom service methods to <code>com.payment.theme.service.impl.ThemesServiceImpl</code> and rerun ServiceBuilder to regenerate this class.
 	 */
-
-	/**
-	 * Returns the OSGi service identifier.
-	 *
-	 * @return the OSGi service identifier
-	 */
-	public static String getOSGiServiceIdentifier() {
-		return getService().getOSGiServiceIdentifier();
-	}
-
 	public static ThemesService getService() {
 		return _serviceTracker.getService();
 	}

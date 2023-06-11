@@ -20,10 +20,6 @@ import com.liferay.portal.kernel.service.BaseLocalService;
 import com.liferay.portal.kernel.transaction.Isolation;
 import com.liferay.portal.kernel.transaction.Transactional;
 
-import com.payment.color.colorobjects.MainColor;
-
-import java.util.List;
-
 import org.osgi.annotation.versioning.ProviderType;
 
 /**
@@ -48,13 +44,5 @@ public interface ColorLocalService extends BaseLocalService {
 	 *
 	 * Never modify this interface directly. Add custom service methods to <code>com.payment.color.service.impl.ColorLocalServiceImpl</code> and rerun ServiceBuilder to automatically copy the method declarations to this interface. Consume the color local service via injection or a <code>org.osgi.util.tracker.ServiceTracker</code>. Use {@link ColorLocalServiceUtil} if injection and service tracking are not available.
 	 */
-	public List<MainColor> adaptColors();
-
-	/**
-	 * Returns the OSGi service identifier.
-	 *
-	 * @return the OSGi service identifier
-	 */
-	public String getOSGiServiceIdentifier();
 
 }

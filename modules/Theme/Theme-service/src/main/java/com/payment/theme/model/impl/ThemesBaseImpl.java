@@ -36,14 +36,6 @@ public abstract class ThemesBaseImpl extends ThemesModelImpl implements Themes {
 	 *
 	 * Never modify or reference this class directly. All methods that expect a themes model instance should use the <code>Themes</code> interface instead.
 	 */
-	@Override
-	public void persist() {
-		if (this.isNew()) {
-			ThemesLocalServiceUtil.addThemes(this);
-		}
-		else {
-			ThemesLocalServiceUtil.updateThemes(this);
-		}
-	}
+	
 
 }
