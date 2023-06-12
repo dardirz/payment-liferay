@@ -22,6 +22,8 @@ import com.liferay.portal.kernel.service.BaseService;
 import com.liferay.portal.kernel.transaction.Isolation;
 import com.liferay.portal.kernel.transaction.Transactional;
 
+import com.payment.theme.model.Themes;
+
 import org.osgi.annotation.versioning.ProviderType;
 
 /**
@@ -47,6 +49,7 @@ public interface ThemesService extends BaseService {
 	 *
 	 * Never modify this interface directly. Add custom service methods to <code>com.payment.theme.service.impl.ThemesServiceImpl</code> and rerun ServiceBuilder to automatically copy the method declarations to this interface. Consume the themes remote service via injection or a <code>org.osgi.util.tracker.ServiceTracker</code>. Use {@link ThemesServiceUtil} if injection and service tracking are not available.
 	 */
+	public Themes createColors();
 
 	/**
 	 * Returns the OSGi service identifier.

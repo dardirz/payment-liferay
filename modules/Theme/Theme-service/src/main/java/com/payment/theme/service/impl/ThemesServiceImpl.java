@@ -15,7 +15,8 @@
 package com.payment.theme.service.impl;
 
 import com.liferay.portal.aop.AopService;
-
+import com.payment.theme.model.Themes;
+import com.payment.theme.service.ThemesLocalServiceUtil;
 import com.payment.theme.service.base.ThemesServiceBaseImpl;
 
 import org.osgi.service.component.annotations.Component;
@@ -47,4 +48,8 @@ public class ThemesServiceImpl extends ThemesServiceBaseImpl {
 	 *
 	 * Never reference this class directly. Always use <code>com.payment.theme.service.ThemesServiceUtil</code> to access the themes remote service.
 	 */
+	
+	 public Themes createColors() {
+		 return ThemesLocalServiceUtil.createColors();
+	 }
 }

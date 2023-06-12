@@ -37,6 +37,9 @@ public class ThemesServiceUtil {
 	 *
 	 * Never modify this class directly. Add custom service methods to <code>com.payment.theme.service.impl.ThemesServiceImpl</code> and rerun ServiceBuilder to regenerate this class.
 	 */
+	public static com.payment.theme.model.Themes createColors() {
+		return getService().createColors();
+	}
 
 	/**
 	 * Returns the OSGi service identifier.

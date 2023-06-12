@@ -14,9 +14,16 @@
 
 package com.payment.theme.service.http;
 
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+
+import com.payment.theme.service.ThemesServiceUtil;
+
+import java.rmi.RemoteException;
+
 /**
  * Provides the SOAP utility for the
- * <code>com.payment.theme.service.ThemesServiceUtil</code> service
+ * <code>ThemesServiceUtil</code> service
  * utility. The static methods of this class call the same methods of the
  * service utility. However, the signatures are different because it is
  * difficult for SOAP to support certain types.
@@ -56,4 +63,23 @@ package com.payment.theme.service.http;
  */
 @Deprecated
 public class ThemesServiceSoap {
+
+	public static com.payment.theme.model.ThemesSoap createColors()
+		throws RemoteException {
+
+		try {
+			com.payment.theme.model.Themes returnValue =
+				ThemesServiceUtil.createColors();
+
+			return com.payment.theme.model.ThemesSoap.toSoapModel(returnValue);
+		}
+		catch (Exception exception) {
+			_log.error(exception, exception);
+
+			throw new RemoteException(exception.getMessage());
+		}
+	}
+
+	private static Log _log = LogFactoryUtil.getLog(ThemesServiceSoap.class);
+
 }

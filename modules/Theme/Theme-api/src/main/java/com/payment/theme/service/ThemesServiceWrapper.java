@@ -30,6 +30,11 @@ public class ThemesServiceWrapper
 		_themesService = themesService;
 	}
 
+	@Override
+	public com.payment.theme.model.Themes createColors() {
+		return _themesService.createColors();
+	}
+
 	/**
 	 * Returns the OSGi service identifier.
 	 *
