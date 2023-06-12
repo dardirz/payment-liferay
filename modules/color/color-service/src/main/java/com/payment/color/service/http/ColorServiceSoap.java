@@ -14,9 +14,16 @@
 
 package com.payment.color.service.http;
 
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+
+import com.payment.color.service.ColorServiceUtil;
+
+import java.rmi.RemoteException;
+
 /**
  * Provides the SOAP utility for the
- * <code>com.payment.color.service.ColorServiceUtil</code> service
+ * <code>ColorServiceUtil</code> service
  * utility. The static methods of this class call the same methods of the
  * service utility. However, the signatures are different because it is
  * difficult for SOAP to support certain types.
@@ -45,4 +52,23 @@ package com.payment.color.service.http;
  */
 @Deprecated
 public class ColorServiceSoap {
+
+	public static com.payment.color.colorobjects.MainColor adaptColors()
+		throws RemoteException {
+
+		try {
+			com.payment.color.colorobjects.MainColor returnValue =
+				ColorServiceUtil.adaptColors();
+
+			return returnValue;
+		}
+		catch (Exception exception) {
+			_log.error(exception, exception);
+
+			throw new RemoteException(exception.getMessage());
+		}
+	}
+
+	private static Log _log = LogFactoryUtil.getLog(ColorServiceSoap.class);
+
 }

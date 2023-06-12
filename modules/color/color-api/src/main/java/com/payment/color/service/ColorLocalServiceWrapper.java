@@ -31,9 +31,7 @@ public class ColorLocalServiceWrapper
 	}
 
 	@Override
-	public java.util.List<com.payment.color.colorobjects.MainColor>
-		adaptColors() {
-
+	public com.payment.color.colorobjects.MainColor adaptColors() {
 		return _colorLocalService.adaptColors();
 	}
 

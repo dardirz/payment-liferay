@@ -24,11 +24,10 @@ import com.payment.color.colorobjects.SuccessColor;
 import com.payment.color.colorobjects.WarningColor;
 import com.payment.color.service.base.ColorLocalServiceBaseImpl;
 import com.payment.theme.model.Themes;
-import com.payment.theme.model.impl.ThemesImpl;
 import com.payment.theme.service.persistence.impl.ThemesPersistenceImpl;
 
-import java.util.ArrayList;
-import java.util.List;
+
+
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -57,8 +56,8 @@ public class ColorLocalServiceImpl extends ColorLocalServiceBaseImpl {
 	 *
 	 * Never reference this class directly. Use <code>com.payment.color.service.ColorLocalService</code> via injection or a <code>org.osgi.util.tracker.ServiceTracker</code> or use <code>com.payment.color.service.ColorLocalServiceUtil</code>.
 	 */
-	public List<MainColor> adaptColors() {
-		List<MainColor> colors = new ArrayList();
+	public MainColor adaptColors() {
+		MainColor colors =new MainColor();
 		Themes theme = _themesPersistenceImpl.findAll().get(0);
 		
 		ErrorColor error = new ErrorColor();
@@ -109,7 +108,7 @@ public class ColorLocalServiceImpl extends ColorLocalServiceBaseImpl {
 		main.setSuccess(success);
 		main.setWarning(warning);
 		
-		colors.add(main);
+		
 		return colors;
 		
 	}
@@ -119,5 +118,4 @@ public class ColorLocalServiceImpl extends ColorLocalServiceBaseImpl {
 	
 	@Reference
 	ThemesPersistenceImpl _themesPersistenceImpl;
-	
 }
