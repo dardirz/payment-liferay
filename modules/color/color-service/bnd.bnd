@@ -1,0 +1,13 @@
+Bundle-Name: color-service
+Bundle-SymbolicName: com.payment.color.service
+Bundle-Version: 1.0.0
+Liferay-Require-SchemaVersion: 1.0.0
+Liferay-Service: true
+-dsannotations-options: inherit
+Export-Package: \
+	com.payment.color.model.impl,\
+	com.payment.color.service.base,\
+	com.payment.color.service.http,\
+	com.payment.color.service.impl,\
+	com.payment.color.service.persistence.impl,\
+	com.payment.color.service.persistence.impl.constants

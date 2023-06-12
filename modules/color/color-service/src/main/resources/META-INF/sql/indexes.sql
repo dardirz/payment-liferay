@@ -1,0 +1,1 @@
+create index IX_ACF265FA on COLORS_Color (uuid_[$COLUMN_LENGTH:75$]);
