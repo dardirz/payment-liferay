@@ -6,8 +6,8 @@ Liferay-Service: true
 -dsannotations-options: inherit
 Export-Package: \
 	com.payment.theme.model.impl,\
-	com.payment.theme.service.persistence.impl,\
 	com.payment.theme.service.base,\
 	com.payment.theme.service.http,\
 	com.payment.theme.service.impl,\
+	com.payment.theme.service.persistence.impl,\
 	com.payment.theme.service.persistence.impl.constants

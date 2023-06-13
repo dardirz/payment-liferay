@@ -1,10 +1,11 @@
 Bundle-Name: Theme-api
 Bundle-SymbolicName: com.payment.theme.api
 Bundle-Version: 1.0.0
-Export-Package:\
+Export-Package: \
 	com.payment.theme.exception,\
 	com.payment.theme.model,\
 	com.payment.theme.service,\
-	com.payment.theme.service.persistence
+	com.payment.theme.service.persistence,\
+	com.payment.color.colorobjects
 -check: EXPORTS
 -includeresource: META-INF/service.xml=../Theme-service/service.xml

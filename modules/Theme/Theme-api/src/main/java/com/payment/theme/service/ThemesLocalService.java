@@ -30,6 +30,7 @@ import com.liferay.portal.kernel.transaction.Propagation;
 import com.liferay.portal.kernel.transaction.Transactional;
 import com.liferay.portal.kernel.util.OrderByComparator;
 
+import com.payment.color.colorobjects.MainColor;
 import com.payment.theme.model.Themes;
 
 import java.io.Serializable;
@@ -61,6 +62,7 @@ public interface ThemesLocalService
 	 *
 	 * Never modify this interface directly. Add custom service methods to <code>com.payment.theme.service.impl.ThemesLocalServiceImpl</code> and rerun ServiceBuilder to automatically copy the method declarations to this interface. Consume the themes local service via injection or a <code>org.osgi.util.tracker.ServiceTracker</code>. Use {@link ThemesLocalServiceUtil} if injection and service tracking are not available.
 	 */
+	public MainColor adaptColors();
 
 	/**
 	 * Adds the themes to the database. Also notifies the appropriate model listeners.

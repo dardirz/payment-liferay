@@ -15,6 +15,7 @@
 package com.payment.theme.service.impl;
 
 import com.liferay.portal.aop.AopService;
+import com.payment.color.colorobjects.MainColor;
 import com.payment.theme.model.Themes;
 import com.payment.theme.service.ThemesLocalServiceUtil;
 import com.payment.theme.service.base.ThemesServiceBaseImpl;
@@ -51,5 +52,9 @@ public class ThemesServiceImpl extends ThemesServiceBaseImpl {
 	
 	 public Themes createColors() {
 		 return ThemesLocalServiceUtil.createColors();
+	 }
+	 
+	 public MainColor adaptColors() {
+		 return ThemesLocalServiceUtil.adaptColors();
 	 }
 }

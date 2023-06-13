@@ -80,6 +80,22 @@ public class ThemesServiceSoap {
 		}
 	}
 
+	public static com.payment.color.colorobjects.MainColor adaptColors()
+		throws RemoteException {
+
+		try {
+			com.payment.color.colorobjects.MainColor returnValue =
+				ThemesServiceUtil.adaptColors();
+
+			return returnValue;
+		}
+		catch (Exception exception) {
+			_log.error(exception, exception);
+
+			throw new RemoteException(exception.getMessage());
+		}
+	}
+
 	private static Log _log = LogFactoryUtil.getLog(ThemesServiceSoap.class);
 
 }

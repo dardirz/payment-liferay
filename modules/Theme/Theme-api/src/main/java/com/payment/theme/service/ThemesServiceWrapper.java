@@ -31,6 +31,11 @@ public class ThemesServiceWrapper
 	}
 
 	@Override
+	public com.payment.color.colorobjects.MainColor adaptColors() {
+		return _themesService.adaptColors();
+	}
+
+	@Override
 	public com.payment.theme.model.Themes createColors() {
 		return _themesService.createColors();
 	}

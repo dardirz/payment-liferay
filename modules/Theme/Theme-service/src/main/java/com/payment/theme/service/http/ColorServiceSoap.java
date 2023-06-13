@@ -12,32 +12,14 @@
  * details.
  */
 
-package com.payment.color.service.http;
-
-import com.liferay.portal.kernel.log.Log;
-import com.liferay.portal.kernel.log.LogFactoryUtil;
-
-import com.payment.color.service.ColorServiceUtil;
-
-import java.rmi.RemoteException;
+package com.payment.theme.service.http;
 
 /**
  * Provides the SOAP utility for the
- * <code>ColorServiceUtil</code> service
+ * <code>com.payment.theme.service.ColorServiceUtil</code> service
  * utility. The static methods of this class call the same methods of the
  * service utility. However, the signatures are different because it is
  * difficult for SOAP to support certain types.
- *
- * <p>
- * ServiceBuilder follows certain rules in translating the methods. For example,
- * if the method in the service utility returns a <code>java.util.List</code>,
- * that is translated to an array of
- * <code>com.payment.color.model.ColorSoap</code>. If the method in the
- * service utility returns a
- * <code>com.payment.color.model.Color</code>, that is translated to a
- * <code>com.payment.color.model.ColorSoap</code>. Methods that SOAP
- * cannot safely wire are skipped.
- * </p>
  *
  * <p>
  * The benefits of using the SOAP utility is that it is cross platform
@@ -63,23 +45,4 @@ import java.rmi.RemoteException;
  */
 @Deprecated
 public class ColorServiceSoap {
-
-	public static com.payment.color.colorobjects.MainColor adaptColors()
-		throws RemoteException {
-
-		try {
-			com.payment.color.colorobjects.MainColor returnValue =
-				ColorServiceUtil.adaptColors();
-
-			return returnValue;
-		}
-		catch (Exception exception) {
-			_log.error(exception, exception);
-
-			throw new RemoteException(exception.getMessage());
-		}
-	}
-
-	private static Log _log = LogFactoryUtil.getLog(ColorServiceSoap.class);
-
 }

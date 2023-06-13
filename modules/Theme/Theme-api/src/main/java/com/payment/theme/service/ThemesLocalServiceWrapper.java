@@ -30,6 +30,11 @@ public class ThemesLocalServiceWrapper
 		_themesLocalService = themesLocalService;
 	}
 
+	@Override
+	public com.payment.color.colorobjects.MainColor adaptColors() {
+		return _themesLocalService.adaptColors();
+	}
+
 	/**
 	 * Adds the themes to the database. Also notifies the appropriate model listeners.
 	 *
